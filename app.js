@@ -15,7 +15,6 @@ const perTapEl = document.getElementById("perTap");
 const comboEl = document.getElementById("combo");
 const energyEl = document.getElementById("energy");
 const frogEl = document.getElementById("frog");
-const tapButton = document.getElementById("tapButton");
 
 function updateUI() {
     coinsEl.textContent = state.coins;
@@ -35,14 +34,22 @@ function tap() {
     state.coins += gain;
     state.energy = Math.max(0, state.energy - 1);
 
-    // Простая "анимация" масштаба
+    // Анимация жабы
     frogEl.classList.add("tapped");
-    setTimeout(() => frogEl.classList.remove("tapped"), 90);
+    setTimeout(() => frogEl.classList.remove("tapped"), 120);
+
+    // Всплывающий текст "+X"
+    const float = document.createElement("span");
+    float.className = "tap-float";
+    float.textContent = `+${gain}`;
+    frogEl.appendChild(float);
+    setTimeout(() => {
+        float.remove();
+    }, 600);
 
     updateUI();
 }
 
-tapButton.addEventListener("click", tap);
 frogEl.addEventListener("click", tap);
 
 // Простейшая регенерация энергии

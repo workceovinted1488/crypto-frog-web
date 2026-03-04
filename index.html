@@ -26,16 +26,14 @@
         <main class="main-layout">
             <section class="hero">
                 <div class="frog-wrapper">
-                    <!-- Здесь будет твоя кастомная жаба (спрайт / картинка / canvas) -->
-                    <div id="frog" class="frog">
-                        🐸
+                    <!-- Активная зона жабы. Сюда можно подставить свою PNG-модель, например images/frog_idle.png -->
+                    <div id="frog" class="frog" aria-label="Крипто Жаба" role="button">
+                        <div class="frog-inner">
+                            <span class="frog-emoji" aria-hidden="true">🐸</span>
+                        </div>
                     </div>
                     <div class="tap-hint">Тапай по Жабе, чтобы добывать ЖАБКОИНЫ!</div>
                 </div>
-
-                <button id="tapButton" class="tap-button">
-                    ТАП 🔥
-                </button>
 
                 <div class="stats">
                     <div class="stat-card">
