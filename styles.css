@@ -95,12 +95,12 @@ body {
 .top-counter {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
 
 .top-icon {
-    width: 18px;
-    height: 18px;
+    width: 26px;
+    height: 26px;
     object-fit: contain;
 }
 
