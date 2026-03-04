@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Крипто Жаба 🐸</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="app">
+        <header class="top-bar">
+            <div class="logo">
+                <span class="logo-emoji">🐸</span>
+                <span class="logo-text">Крипто Жаба</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="soft-currency">
+                    🪙 <span id="coins">0</span>
+                </div>
+                <div class="energy">
+                    ⚡ <span id="energy">100</span>/100
+                </div>
+            </div>
+        </header>
+
+        <main class="main-layout">
+            <section class="hero">
+                <div class="frog-wrapper">
+                    <!-- Здесь будет твоя кастомная жаба (спрайт / картинка / canvas) -->
+                    <div id="frog" class="frog">
+                        🐸
+                    </div>
+                    <div class="tap-hint">Тапай по Жабе, чтобы добывать ЖАБКОИНЫ!</div>
+                </div>
+
+                <button id="tapButton" class="tap-button">
+                    ТАП 🔥
+                </button>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-label">ЖАБКОИНЫ</div>
+                        <div class="stat-value" id="totalCoins">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">За тап</div>
+                        <div class="stat-value" id="perTap">1</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Комбо</div>
+                        <div class="stat-value" id="combo">x1</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bottom-panels">
+                <div class="panel">
+                    <h2>Бусты</h2>
+                    <div class="boosts">
+                        <button class="boost-card" data-boost="power">
+                            <div class="boost-title">Сила лапок</div>
+                            <div class="boost-desc">+1 к ЖАБКОИНАМ за тап</div>
+                            <div class="boost-cost">Стоимость: 50 🪙</div>
+                        </button>
+                        <button class="boost-card" data-boost="auto">
+                            <div class="boost-title">Авто‑мухоловка</div>
+                            <div class="boost-desc">Пассивный доход каждую секунду</div>
+                            <div class="boost-cost">Стоимость: 200 🪙</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h2>Друзья</h2>
+                    <p class="muted">
+                        Приглашай друзей в канал и бот — тут появится реферальная система и бонусы.
+                    </p>
+                </div>
+
+                <div class="panel">
+                    <h2>Лидерборд</h2>
+                    <p class="muted">
+                        В будущем здесь будет таблица лидеров, как в Hamster Kombat: ник, уровень, ЖАБКОИНЫ.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bottom-nav">
+            <button class="nav-btn active">Жаба</button>
+            <button class="nav-btn">Бусты</button>
+            <button class="nav-btn">Квесты</button>
+            <button class="nav-btn">Профиль</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,312 @@
+:root {
+    --bg: #050714;
+    --bg-soft: #0b0f24;
+    --bg-softer: #151a33;
+    --accent: #35e77a;
+    --accent-soft: rgba(53, 231, 122, 0.2);
+    --accent-strong: #47ff93;
+    --danger: #ff6b81;
+    --text: #ffffff;
+    --text-muted: #9ba3c2;
+    --border-soft: rgba(255, 255, 255, 0.08);
+    --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top, #13193b 0, #050714 60%);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#app {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #050714 0%, #050714 40%, #050714 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 12px 12px 10px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background: rgba(5, 7, 20, 0.85);
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px);
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-emoji {
+    font-size: 1.4rem;
+}
+
+.logo-text {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.soft-currency,
+.energy {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(12, 17, 42, 0.9);
+    border: 1px solid var(--border-soft);
+}
+
+.main-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.hero {
+    background: radial-gradient(circle at top, #222a55 0, #0b0f24 45%, #050714 100%);
+    border-radius: var(--radius-lg);
+    padding: 14px 14px 16px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.frog-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.frog {
+    width: 180px;
+    height: 180px;
+    border-radius: 40% 40% 36% 36%;
+    background: radial-gradient(circle at 30% 20%, #6cffb3 0, #35e77a 45%, #1dab52 70%, #15793a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.65),
+        0 0 0 6px rgba(53, 231, 122, 0.25);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transform-origin: center bottom;
+    transition: transform 0.08s ease-out;
+}
+
+.frog:active {
+    transform: scale(0.94) translateY(4px);
+}
+
+.tap-hint {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.tap-button {
+    margin-top: 6px;
+    border: none;
+    padding: 12px 40px;
+    border-radius: var(--radius-pill);
+    background: radial-gradient(circle at top left, var(--accent-strong), var(--accent));
+    color: #020309;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.7),
+        0 0 18px rgba(71, 255, 147, 0.65);
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.tap-button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.7),
+        0 0 10px rgba(71, 255, 147, 0.45);
+}
+
+.stats {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: var(--radius-md);
+    background: rgba(10, 14, 36, 0.9);
+    border: 1px solid var(--border-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.bottom-panels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+    overflow-y: auto;
+    padding-bottom: 4px;
+}
+
+.panel {
+    background: radial-gradient(circle at top left, #181f45 0, #0b0f24 40%, #050714 100%);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-soft);
+    padding: 10px 12px 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+.panel h2 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+}
+
+.muted {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.boosts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.boost-card {
+    width: 100%;
+    text-align: left;
+    border-radius: var(--radius-md);
+    padding: 8px 10px;
+    border: 1px solid var(--border-soft);
+    background: linear-gradient(135deg, rgba(53, 231, 122, 0.06), rgba(5, 7, 20, 0.95));
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.boost-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.boost-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.boost-cost {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    color: var(--accent-strong);
+}
+
+.bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    padding: 8px;
+    background: rgba(5, 7, 20, 0.96);
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.75);
+    margin-top: 8px;
+}
+
+.nav-btn {
+    flex: 1;
+    border-radius: 999px;
+    border: none;
+    padding: 7px 0;
+    font-size: 0.8rem;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    background: var(--accent-soft);
+    color: var(--accent-strong);
+}
+
+@media (max-width: 380px) {
+    .frog {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tap-button {
+        width: 100%;
+    }
+}
+
