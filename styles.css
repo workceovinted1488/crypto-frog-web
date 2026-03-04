@@ -92,6 +92,18 @@ body {
     border: 1px solid var(--border-soft);
 }
 
+.top-counter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.top-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
 .main-layout {
     flex: 1;
     display: flex;
