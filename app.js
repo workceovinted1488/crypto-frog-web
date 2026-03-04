@@ -38,10 +38,17 @@ function tap() {
     frogEl.classList.add("tapped");
     setTimeout(() => frogEl.classList.remove("tapped"), 120);
 
-    // Всплывающий текст "+X"
+    // Всплывающий текст "+X" в случайном месте внутри жабы
     const float = document.createElement("span");
     float.className = "tap-float";
     float.textContent = `+${gain}`;
+
+    // Случайная позиция в процентах внутри жабы
+    const randX = 25 + Math.random() * 50; // от 25% до 75%
+    const randY = 15 + Math.random() * 55; // от 15% до 70%
+    float.style.left = `${randX}%`;
+    float.style.top = `${randY}%`;
+
     frogEl.appendChild(float);
     setTimeout(() => {
         float.remove();
